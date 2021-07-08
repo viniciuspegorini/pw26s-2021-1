@@ -45,7 +45,7 @@
 - ZendFramework 
 - Yii Framework
 - CakePHP
-- Symfony   
+- Symfony        ----------------------> Robson
 - Grails 
 - Play 
 - Tapestry 
@@ -53,14 +53,14 @@
 - Pyramid
 - Wicket
 - Spark
-- Laravel 
+- Laravel        ----------------------> Rafael 
 - Ionic 
 - Sails
 - Bootfaces
 - Meteor 
 - React
 - React Native
-- Flutter
+- Flutter         --------------------> Alexandre
 - Next.JS
 - Amber
 - Vue
