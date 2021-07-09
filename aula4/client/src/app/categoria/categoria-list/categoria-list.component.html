@@ -1,0 +1,17 @@
+<h2> Lists de Categorias </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of categorias">
+            <td>{{categoria.id}}</td>
+            <td>{{categoria.nome}}</td>
+            <td> ... </td>
+        </tr>
+    </tbody>
+</table>
