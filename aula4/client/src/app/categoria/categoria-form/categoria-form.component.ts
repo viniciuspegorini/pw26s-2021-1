@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/categoria';
 import { CategoriaService } from '../service/categoria.service';
 
@@ -11,10 +11,18 @@ import { CategoriaService } from '../service/categoria.service';
 export class CategoriaFormComponent implements OnInit {
 
   categoria = new Categoria();
+
   constructor(private categoriaService: CategoriaService,
-              private router: Router) { }
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.params.id);
+    if (id) {
+      this.categoriaService.findOne(id).subscribe( e => {
+        this.categoria = e;
+      });
+    }
   }
 
   save(): void {
@@ -26,6 +34,6 @@ export class CategoriaFormComponent implements OnInit {
   }
 
   cancel(): void {
-
+    this.router.navigate(['categoria']);
   }
 }

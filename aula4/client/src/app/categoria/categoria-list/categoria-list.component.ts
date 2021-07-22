@@ -15,11 +15,19 @@ export class CategoriaListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.findAll();
+  }
+
+  findAll(): void {
     this.categoriaService.findAll().subscribe( e => {
       this.categorias = e;
     });
-    
-    
+  }
+
+  delete(id: number): void {
+    this.categoriaService.delete(id).subscribe( () => {
+      this.findAll();
+    });
   }
 
 }

@@ -8,6 +8,7 @@ import { CategoriaListComponent } from './categoria/categoria-list/categoria-lis
 import { CategoriaFormComponent } from './categoria/categoria-form/categoria-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProdutoModule } from './produto/produto.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

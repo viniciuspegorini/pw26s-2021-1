@@ -1,4 +1,6 @@
-<h2> Lists de Categorias </h2>
+<h2> Lista de Categorias </h2>
+
+<a [routerLink]="['/categoria/new']" class="btn btn-success">Novo</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -11,7 +13,10 @@
         <tr *ngFor="let categoria of categorias">
             <td>{{categoria.id}}</td>
             <td>{{categoria.nome}}</td>
-            <td> ... </td>
+            <td> 
+                <a [routerLink]="['/categoria', categoria.id]" class="btn btn-primary">Editar</a>
+                <a (click)="delete(categoria.id)" class="btn btn-danger">Remover</a>
+            </td>
         </tr>
     </tbody>
 </table>
