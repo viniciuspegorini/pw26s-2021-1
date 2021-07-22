@@ -19,8 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule
   ]
 })
 export class CategoriaModule { }
