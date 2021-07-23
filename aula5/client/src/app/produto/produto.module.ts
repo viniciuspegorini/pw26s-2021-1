@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProdutoListComponent } from './produto-list/produto-list.component';
 import { ProdutoFormComponent } from './produto-form/produto-form.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProdutoModule { }
